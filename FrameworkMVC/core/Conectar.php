@@ -66,5 +66,5 @@ class Conectar{
 // comit Alex
 //commit 2 Alex
 
-// hola nuevo commit de danny....
+// hola nuevo commit de danny......
 ?>
