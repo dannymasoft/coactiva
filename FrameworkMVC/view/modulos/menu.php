@@ -62,7 +62,8 @@
 			
           </ul>
         </li>
-        <li class="dropdown">
+        
+         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-print	" ><?php echo " Informes" ;?> </span> <span class="caret"></span></a>
           <ul class="dropdown-menu">
         	<li><a href="index.php?controller=Categorias&action=ReporteTotal" target="blank">Documentos por Categorías</a>
@@ -95,6 +96,53 @@
         
         
       </ul>
+      
+       <!-- codigo de push right -->
+        
+        <div class="pull-right">
+ 		<div class="pull-right">
+ 		<p> <strong> <?php echo CLIENTE?>  </strong>  </p>
+ 		</div>	
+		<?php  
+			 $status = session_status();
+			 if  (isset( $_SESSION['nombre_usuario'] ))  {  
+		?>
+		
+		 	 <div class="dropdown">
+				  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user" ><?php echo " Bienvenid@  ".$_SESSION['nombre_usuario'];?></span>
+				  <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="index.php?controller=Usuarios&action=cerrar_sesion">Cerrar Sesión</a></li>
+				    <li><a href="index.php?controller=Usuarios&action=Actualiza">Actualizar Datos de Usuario</a></li>
+				    <li><a href="#">Conectado desde: <?php echo $_SESSION['ip_usuario']?></a></li>
+				  </ul>
+				  
+			</div>
+		 	
+		 	
+		 	
+		    
+		    <?php  ?> 
+		<?php 
+			 }
+			 else 
+			 {     ?>
+		
+		
+			<div class="dropdown">
+					  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-lock" > Iniciar Sesión </span>
+					  
+					  </button>
+					  
+				</div>
+		<?php }
+				
+		 ?>
+			</div>  
+  
+  </div>
+        <!-- termino de push right -->
       <form class="navbar-form navbar-right" role="search" action="<?php echo $helper->url("Documentos","Buscador");	
 				?>"  method="post" >
   		      		      

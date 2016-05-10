@@ -32,51 +32,10 @@
   
   <div  >
   <div style="margin-top: 10px;">
-  <img src="view/images/logo_adocument.png" class="img-responsive" alt="Responsive image">
+  <img src="view/images/logo-coctiva.png" class="img-responsive" alt="Responsive image">
   </div>
-  <div class="pull-right">
- 		<div class="pull-right">
- 		<p> <strong> <?php echo CLIENTE?>  </strong>  </p>
- 		</div>	
-		<?php  
-			 $status = session_status();
-			 if  (isset( $_SESSION['nombre_usuario'] ))  {  
-		?>
-		
-		 	 <div class="dropdown">
-				  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user" ><?php echo " Bienvenid@  ".$_SESSION['nombre_usuario'];?></span>
-				  <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu">
-				    <li><a href="index.php?controller=Usuarios&action=cerrar_sesion">Cerrar Sesión</a></li>
-				    <li><a href="index.php?controller=Usuarios&action=Actualiza">Actualizar Datos de Usuario</a></li>
-				    <li><a href="#">Conectado desde: <?php echo $_SESSION['ip_usuario']?></a></li>
-				  </ul>
-				  
-			</div>
-		 	
-		 	
-		 	
-		    
-		    <?php  ?> 
-		<?php 
-			 }
-			 else 
-			 {     ?>
-		
-		
-			<div class="dropdown">
-					  <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-lock" > Iniciar Sesión </span>
-					  
-					  </button>
-					  
-				</div>
-		<?php }
-				
-		 ?>
-			</div>  
+  <!-- aqui cambio de pull derecho -->
   
-  </div>
         
 </div>
 
